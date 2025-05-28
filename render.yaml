@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: ecoride-slim
+    env: php
+    buildCommand: "composer install"
+    startCommand: "php -S 0.0.0.0:10000 -t public"
+    plan: free
+    envVars:
+      - key: DB_HOST
+        value: your-mysql-host
+      - key: DB_NAME
+        value: ecoridepool
+      - key: DB_USER
+        value: your-user
+      - key: DB_PASS
+        value: your-password
+      - key: MONGO_URI
+        value: your-mongo-uri
